@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".FraisForfait">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/header"></include>
+
+
+        <TextView
+            android:id="@+id/btnFraisForfait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FRAIS FORFAIT"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/type"
+            android:text="Type:"
+            android:textSize="20dp" />
+
+        -
+
+        <Spinner
+            android:id="@+id/typeForfait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="Selectionnez le type de forfait "
+            android:entries="@array/TypeForfait" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:labelFor="@+id/Quantite"
+            android:text="Quantité:"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/Quantite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+
+            />
+        <TextView
+            android:id="@+id/txtsomme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  ></TextView>
+
+
+        <TextView
+            android:id="@+id/dateDepense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Date de la dépense:"
+            android:textSize="20dp" />
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+
+
+            <EditText
+                android:id="@+id/Text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="jj-MM-aaaa"
+                android:inputType="date" />
+            <ImageButton
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:onClick="ShowCal"
+                app:srcCompat="@drawable/newcal" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/BtnAjouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="170dp"
+            android:onClick="setBtnAjouter"
+            android:text="AJOUTER" />
+
+
+        <include layout="@layout/footer"></include>
+
+
+
+    </LinearLayout>
+</ScrollView>
