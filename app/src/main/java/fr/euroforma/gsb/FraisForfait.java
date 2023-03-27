@@ -63,22 +63,38 @@ public class FraisForfait extends AppCompatActivity {
            Msomme.setText(s1.toString());
             }
         });
-        if(database.insertData(typeForfait.toString(),Quantite,Text_date.toString(),Msomme,f,){
-            afficher("Valeur ajoutée avec succès.Montant="+Msomme);
-            return;
-        }
-
 
         }
-
-
-
-
-
-
-    public void setBtnAjouter(View v) {
+        public void setBtnAjouter(View v) {
         affiche(Quantite.getText().toString()+" "+typeForfait.getSelectedItem().toString());
-    }
+            if (Quantite.getText().toString().trim().length() == 0 || typeForfait.getSelectedItem().toString().length() == 0
+                    || Text_date.getText().toString().trim().length()==0) {
+                //teste si le champ quantite est renseigné ou si le champ type n'est pas vide
+                // et qu'on a selectionne l'une des 4 possibilités et si la date est renseignée
+                affiche("Erreur! Champ vide");
+                return;
+            } else if (Text_date.getText().toString().trim().length()>10 || Text_date.getText().toString().trim().length()<8 ) {
+                //test sur la validité du champ date
+                affiche("Erreur! Date invalide");
+                return;
+
+            }else if(Integer.parseInt(Quantite.getText().toString())<1) {
+                affiche("Erreur quantite invalide ");
+                return;
+
+            }else{
+        String tf1= typeForfait.getSelectedItem().toString();
+        Integer q1 = Integer.parseInt(Quantite.getText().toString());
+        String d1 =Text_date.getText().toString();
+        Float m1 = Float.parseFloat(Msomme.getText().toString());
+
+
+        if(database.insertData(tf1,q1,d1,m1,tf1)){
+            affiche("Valeur ajoutée avec succès.Montant="+m1);
+            return;
+        }                            ;
+
+    }}
     public void retourMenu(View view){
         Intent intent=new Intent(FraisForfait.this,MainActivity.class);
         startActivity(intent);

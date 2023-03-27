@@ -14,9 +14,26 @@
     <include layout="@layout/header">
 
     </include>
+        <ListView
+            android:id="@+id/frais_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1dp" />
 
-        <include layout="@layout/footer">
-        </include>
+
+
+
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:padding="10dp"
+                android:text="synthese du mois" android:textSize="20sp" />
+
+            <EditText android:id="@+id/myFilter" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:ems="10"
+                android:hint="entrez une date">
+                <requestFocus />
+            </EditText>
+        <include layout="@layout/footer"/>
+
     </LinearLayout>
 
 

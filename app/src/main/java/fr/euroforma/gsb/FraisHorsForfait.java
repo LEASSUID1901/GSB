@@ -22,6 +22,7 @@ public class FraisHorsForfait extends AppCompatActivity {
     int jj=calendrier.get(Calendar.DAY_OF_MONTH);
     int mm=calendrier.get(Calendar.MONTH);
     int aaaa=calendrier.get(Calendar.YEAR);
+    BDDHelper database;
 
 
 
@@ -33,6 +34,10 @@ public class FraisHorsForfait extends AppCompatActivity {
         Montant = findViewById(R.id.montant);
        maDate= findViewById(R.id.maDate);
 
+
+        database=new BDDHelper(this);
+        database.open();
+
     }
 
 
@@ -41,9 +46,31 @@ public class FraisHorsForfait extends AppCompatActivity {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
     public void setBtnAjouterFHF(View v) {
+        if (Montant.getText().toString().trim().length() == 0 || Libelle.getText().toString().length() == 0
+                || maDate.getText().toString().trim().length()==0) {
+            //teste si le champ quantite est renseigné ou si le champ type n'est pas vide
+            // et qu'on a selectionne l'une des 4 possibilités et si la date est renseignée
+            afficheFHF("Erreur! Champ vide");
+            return;
+        } else if (maDate.getText().toString().trim().length()>10 || maDate.getText().toString().trim().length()<8 ) {
+            //test sur la validité du champ date
+            afficheFHF("Erreur! Date invalide");
+            return;
+
+
+
+        }else{
+
+        String tf1=Libelle.getText().toString();
+        String date=maDate.getText().toString();
+        Float m1 = Float.parseFloat(Montant.getText().toString());
+        Integer Q1=0;
         afficheFHF(Libelle.getText().toString()+" "+Montant.getText().toString());
-    }
-    public void ShowCal(View vv) {
+        if(database.insertData(tf1,Q1,date,m1,tf1)){
+            afficheFHF("Valeur ajoutée avec succès.Montant="+m1);
+            return;
+    }}}
+    public void ShowCal (View v) {
         picker = new DatePickerDialog(FraisHorsForfait.this,
                 new DatePickerDialog.OnDateSetListener() {
                     @Override

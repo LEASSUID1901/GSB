@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_authentification.xml" value="0.2" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_frais_forfait.xml" value="0.2" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_frais_hors_forfait.xml" value="0.264" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_frais_forfait.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_frais_hors_forfait.xml" value="0.1" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_historique.xml" value="0.134375" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_parametres.xml" value="0.15760869565217392" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_synthese.xml" value="0.134375" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/activity_synthese.xml" value="0.1" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/detailfrais.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/details_frais.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/footer.xml" value="0.291970802919708" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/GSB/app/src/main/res/layout/header.xml" value="0.24895833333333334" />
       </map>
