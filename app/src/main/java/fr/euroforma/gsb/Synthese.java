@@ -62,7 +62,7 @@ public class Synthese extends AppCompatActivity {
                 R.id.IdFrais,
 
         };
-        //On crée l'adaptateur à l'aide du curseur pointant sur les données souhaitées
+        //On crée l'adaptateur à l'aide du curseur pointant sur les données souhaitées :git
         // ainsi que les informations de mise en page
         dataAdapter = new SimpleCursorAdapter(
                 this, R.layout.details_frais,
